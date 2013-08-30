@@ -1,0 +1,2286 @@
+﻿@charset "utf-8";
+
+
+/******************************************************************************************** FONT FACE */
+
+@font-face {
+	font-family: 'ZettaSerifBook';
+	src: url('../../Fonts/MaerskComExt/zetta_serif-book-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_serif-book-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_serif-book-webfont.svg#webfontKQWKD40o') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSerifDemiBold';
+	src: url('../../Fonts/MaerskComExt/zetta_serif-demibold-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_serif-demibold-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_serif-demibold-webfont.svg#webfontzHSQzDqN') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSansDemiBold';
+	src: url('../../Fonts/MaerskComExt/zetta_sans-demibold-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_sans-demibold-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_sans-demibold-webfont.svg#webfontw6QWJL4l') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSerifRegular';
+	src: url('../../Fonts/MaerskComExt/zetta_serif-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_serif-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_serif-webfont.svg#webfontraDoaVG0') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSansLight';
+	src: url('../../Fonts/MaerskComExt/zetta_sans-light-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_sans-light-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_sans-light-webfont.svg#webfontcq7zln2x') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSansRegular';
+	src: url('../../Fonts/MaerskComExt/zetta_sans-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_sans-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_sans-webfont.svg#webfontClcXZ6M8') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+@font-face {
+	font-family: 'ZettaSansBook';
+	src: url('../../Fonts/MaerskComExt/zetta_sans-book-webfont.eot');
+	src: local('☺'), url('../../Fonts/MaerskComExt/zetta_sans-book-webfont.ttf') format('truetype'), url('../../Fonts/MaerskComExt/zetta_sans-book-webfont.svg#webfontyaN5fRqo') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+
+/********************************************************************************************** GLOBALS */
+
+*{margin:0; padding:0}
+
+body,
+body#MaerskComMasterPageBody {
+	font:14px/21px Tahoma, Geneva, sans-serif;
+	color:black;
+	background:#e5edf0;
+	-webkit-font-smoothing:antialiased;
+}
+	
+a,
+body .ms-WPBody a:link,
+body .ms-WPBody a:visited {
+  color:#6ebad7;
+  text-decoration:none;
+}
+a:hover,
+body .ms-WPBody a:hover{color:#004e6b}
+img{border:none}
+h1{font:normal 40px 'ZettaSansRegular', Tahoma, Geneva, sans-serif}
+h1 span{color:#69b8d6}
+h2{font:bold 21px/25px Tahoma, Geneva, sans-serif}
+h3{font:bold 1em/21px Tahoma, Geneva, sans-serif}
+p{margin-bottom:21px}
+
+
+/******************************************************************************************** STRUCTURE */
+
+.wrapper{
+	position:relative;
+	width:942px;
+	overflow:hidden;
+	margin:0 auto 20px;
+	padding:0 26px;
+	background:url('../../Images/MaerskComExt/wrapper.gif') repeat-y;}
+	
+.col{float:left}
+.col-213{width:213px; float:right}
+.col-228{width:228px}
+.col-238,
+.sideL{width:238px}
+.col-450{width:450px}
+.col-690,
+.sideR{width:690px}
+.col-block{margin-bottom:28px}
+.col-block:after{
+	display:block;
+	height:0;
+	overflow:hidden;
+	clear:both;
+	content:'&nbsp;';}
+
+
+/************************************************************************************************** TOP */
+
+.header .container{
+	width:100%;
+	overflow:hidden;
+	font-size:11px;}
+
+.header .logo{float:left; margin:34px 0 37px 15px}
+.header .search,
+.header ul{
+	float:right;
+	margin:55px 0 0 10px;
+	line-height:11px;}
+	
+.header li:first-child{border-left:none; margin-left:0}
+.header li{
+	list-style:none;
+	float:left;
+	margin:3px 0 0 8px;
+	padding-left:8px;
+	border-left:1px solid #8fcae0;}
+	
+.header a:hover,
+.header a.current{color:#00161c}
+
+.header input{float:left}
+.search .ms-sbtable-ex{margin:0;width:auto}
+.search .ms-sbplain{
+	width:140px;
+	height:14px;
+	padding:1px 3px;
+	font:11px Arial, Helvetica, sans-serif;
+	background:white;
+	border:1px solid #7db5cd;
+	border-right:none;
+	border-bottom-color:#d6eff8;}
+	
+.header .btn{
+	width:21px;
+	height:18px;
+	background:url('../../Images/MaerskComExt/zoom.gif') no-repeat;
+	border:none;}
+	
+.header .map{
+	width:96px;
+	height:64px;
+	float:right;
+	margin:30px 0 0 8px;
+	border-left:none;}
+	
+.header .map a{
+	position:relative;
+	float:left;
+	width:100%;
+	height:100%;
+	line-height:300px;
+	overflow:hidden;
+	background:url('../../Images/MaerskComExt/map.gif') no-repeat;}
+	
+.menu {
+	margin-bottom:20px;
+	padding-bottom:5px;
+	font:18px/24px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	background:#69b8d6 url(../../Images/MaerskComExt/main-menu.png) no-repeat 0 0;
+	border-bottom:4px solid #e2e2e2;
+}
+	
+.menu ul {
+	height:70px;
+	overflow:hidden;
+	padding:3px 0 0 1px;
+}
+	
+.menu li {
+	list-style:none;
+	float:left;
+}
+
+.menu a {
+	float: left;
+	width: 209px;
+	height: 56px;
+	padding: 7px 15px 7px 14px;
+	color:#dfeef7;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #0e4c66;
+}
+
+#mainmenu4 a {
+	width:197px;
+}
+.menu small {
+	display:block;
+	font:10px/13px Tahoma, Geneva, sans-serif;
+	text-transform:none;
+	cursor:pointer;
+}
+	
+.menu a:hover,
+.menu a.current {
+  color: white;
+}
+.menu a.current{
+  background: url('../../Images/MaerskComExt/menu-active.png') no-repeat 0 0;
+}
+.menu #mainmenu4 a.current {
+  background-position: 0 100%;
+}
+
+
+.has-js .menu a,
+.has-js .menu a:hover {
+ color:#c2ecf3;
+}
+.has-js .menu a.current {
+  color: #fff;
+}
+
+.header-siteaction{
+	clear:both;
+	display:block;
+	position:absolute;
+	right:0;
+	top:0;
+	margin-right:26px;}
+
+.search .ms-sbcell{border:none; padding:0}
+.search img{
+	border:medium none;
+	height:18px;
+	width:21px;}
+
+.header-cate{
+	float:right;
+	line-height:11px;
+	margin:55px 0 0 10px;
+	padding-top:3px;}
+	
+.header-cate span,
+.header-cate em{float:left}
+.header-cate em{border-left:1px solid #8FCAE0; margin:0 4px 0 6px}
+.header table{border-collapse:collapse}
+.header td input{float:right}
+.header td img{float:left}
+.header .ms-sbLastcell{width:auto}
+.header .ms-siteaction td.ms-siteactionsmenu img{float:none;}
+
+
+/*********************************************************************************************** SLIDER */
+
+.slider{
+	width:942px;
+	margin:0 0 30px;
+	padding-bottom:1px;
+	border-bottom:1px solid #115c6d;}
+	
+.slider img{display:block}
+.slider ul{height:300px; overflow:hidden}
+.slider li{
+	list-style:none;
+	position:relative;
+	width:942px;}
+	
+.slider-textarea{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:82px;
+	background:url('../../Images/MaerskComExt/slider-textarea.png') no-repeat;}
+	
+.slider-textarea .alignleft,
+.slider-textarea .alignright{width:50%; height:100%}
+.slider-textarea .alignleft div{display:table; height:100%}
+.slider .slider-textarea h2{
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 18px;
+	font:30px/40px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+	color:white;
+	text-shadow:1px 1px 1px #0d272e;}
+	
+.slider-textarea .alignright div{
+	padding:22px 12px 18px 0;
+	font:14px/18px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	letter-spacing:1px;
+	color:white;
+	text-shadow:1px 1px 1px #0d272e;}
+	
+.slider .slider-textarea .alignright a,
+.slider .slider-textarea .alignright a:link,
+.slider .slider-textarea .alignright a:active,
+.slider .slider-textarea .alignright a:visited{color:#98daea; display:inline-block}
+.slider .slider-textarea .alignright a:hover{color:white; text-decoration:none}
+
+.slider-menu{
+	position: relative;
+	height: 47px;
+	overflow: hidden;
+	margin-top: -10px;
+	padding-top: 10px;
+	background: url('../../Images/MaerskComExt/slider-menu.png') no-repeat 0 9px;
+}
+	
+.slider .slider-menu a,
+.slider .slider-menu a:link,
+.slider .slider-menu a:visited,
+.slider .slider-menu a:active {
+	float: left;
+	width: 238px;
+	height: 46px;
+  display: inline;
+  margin: 0;
+  padding: 1px 0 0;
+	font: 14px/46px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	text-shadow: 1px 1px 1px #112932;
+	color: #fff;
+	outline: none;
+}	
+
+.slider .slider-menu a.last {
+  width:228px !important;
+}
+
+.slider .slider-menu a:hover,
+.slider .slider-menu a:active {
+  color: #fff;
+  background: url('../../Images/MaerskComExt/slider-menu-active.png') no-repeat 0 0;
+}
+.slider .slider-menu a.current,
+.slider .slider-menu a.current:hover,
+.slider .slider-menu a.current:active,
+.slider .slider-menu a.current:visited {
+  margin-top: -10px;
+  padding-top: 11px;
+  color: #fff;
+  background: url('../../Images/MaerskComExt/slider-menu-active.png') no-repeat 50% -72px;
+}
+.slider .slider-menu a.last-current,
+.slider .slider-menu a.last-current:hover,
+.slider .slider-menu a.last-current:active {
+  background: url('../../Images/MaerskComExt/slider-menu-last-active.png') no-repeat 0 0;
+}
+
+.jcarousel-clip {
+  width:100%;
+}
+
+
+/******************************************************************************************** FRONTPAGE */
+
+.front-content{
+	width:100%;
+	overflow:hidden;
+	padding-bottom:25px;}
+	
+.front-content .col-238{margin-right:15px}
+.front-content .recent-news .date,
+.teaser-news-shortpart-date{
+	padding:0;
+	font:14px 'ZettaSerifBook', Georgia, "Times New Roman", Times, serif;
+	color:black;}
+	
+.teaser-news-shortpart-line{display:none}
+.recent-news a,
+.teaser-news-shortpart div.teaser-more a{color:#004e6b}
+.front-content .recent-news h2,
+.teaser-news-shortpart-title{
+	margin:0 0 0.3em;
+	padding:0;
+	font:normal 25px/30px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	color:#004e6b;
+	text-transform:uppercase;}
+	
+.teaser-news-shortpart-txt{margin-bottom:21px; padding:0}
+.teaser-news-shortpart-more{margin:0}
+.teaser-more{padding:0; background:none}
+	
+.image-overlay:hover{color:white}
+.image-overlay{
+	position:relative;
+	float:left;
+	font:17px/52px 'ZettaSerifRegular', Tahoma, Geneva, sans-serif;
+	color:white;
+	text-transform:uppercase;
+	text-shadow:1px 1px #306577;}
+	
+.image-overlay img{float:left}
+.image-overlay span{
+	display:block;
+	position:absolute;
+	left:0;
+	bottom:34px;
+	width:98.5%;
+	height:52px;
+	background:url('../../Images/MaerskComExt/image-overlay.png') repeat-x;}
+	
+.image-overlay span span{
+	position:static;
+	float:left;
+	width:auto;
+	color: #fff;
+	padding:0 32px 0 12px;
+	cursor: pointer;
+	background:url('../../Images/MaerskComExt/image-arrow.gif') no-repeat right 14px;}
+	
+.front-content .quote-block div{
+	position:relative;
+	min-height:190px;
+	margin:-12px 0 0 -25px;
+	padding:12px 0 0 25px;
+	background:url('../../Images/MaerskComExt/quotes-shadow.gif') no-repeat;}
+.front-content .col-238 .quote-block div {
+  background: transparent;
+}
+	
+body .ms-WPBody {font: 14px/21px Tahoma, Geneva, sans-serif;color:black;}
+.teaser-news-shortpart-content{margin:0}
+
+
+/****************************************************************************************** INNER PAGES */
+
+.page-content{
+	width:100%;
+	overflow:hidden;
+	padding-top:16px;}
+	
+.submenu{
+	font:13px/1em 'ZettaSerifBook', Georgia, "Times New Roman", Times, serif;
+	text-transform:uppercase;
+	border-top:1px solid #d9f4f8;}
+	
+.submenu li{list-style:none}
+.submenu a{
+	display:block;
+	padding:14px 10px;
+	color:#004e6b;
+	border-bottom:1px solid #d9f4f8;}
+	
+.submenu a:hover,
+.submenu .current a,
+.submenu .current-sub a,
+.submenu .current-subindex a {background:#ebf4f5;}
+
+.submenu .current-sub li a,
+.submenu .current-subindex li a {
+  background: transparent;
+}
+.submenu .current a,
+.submenu .current-sub a,
+.submenu .current-subindex a {font-weight:bold;}
+
+.submenu .current-subindex a,
+.submenu .current-sub .current a {
+  font-weight: normal;
+}
+.submenu ul{display:none}
+
+.submenu .current ul,
+.submenu .current-sub ul,
+.submenu .current-subindex ul{display:block;}
+.submenu .current ul a,
+.submenu .current-sub ul a,
+.submenu .current-subindex ul a{
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 192px 50%;
+  font-weight:normal;
+}
+
+.submenu .current ul a:hover,
+.submenu .current-sub ul a:hover,
+.submenu .current-subindex ul a:hover,
+.submenu .current .current a,
+.submenu .current-sub .current a {
+  background-color:#f8fbfc;
+}
+.submenu .current .current a,
+.submenu .current-sub .current a {
+  background-image:url('../../Images/MaerskComExt/menu-arrow.gif');
+  background-position: 192px 50%;
+  background-repeat: no-repeat;
+}
+.submenu li li a{padding:10px 35px 10px 20px;font-size:12px}
+
+.col-690 h1,
+.sideR h1,
+.sideR .content-title{/*padding-right:90px; */margin:-9px 0 10px; color: #69b8d6;}
+.sideR .content-title{font:normal 40px 'ZettaSansRegular', Tahoma, Geneva, sans-serif; text-transform:uppercase}
+.sideR .content-title span{color:#69b8d6}
+
+.page-content .col-450 .col-inner{padding-right:16px}
+.page-content h2{padding:0 0 3px}
+.page-content .quote-block{margin-top:-10px; position:relative}
+.page-content .col-690 ul,
+.page-content .sideR ul,
+.page-content .col-690 ol,
+.page-content .sideR ol,
+#ZoneTable ol {
+  margin-bottom:21px;
+ }
+
+.page-content .col-690 ul li,
+.page-content .sideR ul li {
+	/* padding-left:17px; */
+}
+	
+.page-content ol li{margin-left:30px}
+	
+.col-shadow,
+.sideR{
+	position:relative;
+	min-height:440px;
+	margin-left:-35px;
+	padding-left:35px;
+	background:url('../../Images/MaerskComExt/column-shadow.png') no-repeat left bottom;
+}
+
+.breadcrumb span {
+  margin-right:4px;
+}
+.breadcrumb a {
+  color:#2887a9;
+}
+.breadcrumb {
+	padding-left:252px;
+	font:11px/19px 'ZettaSerifRegular', Georgia, "Times New Roman", Times, serif;
+	text-transform:uppercase;
+	color:#2887a9;
+}
+	
+.action-links,
+.content-plus{
+	position:absolute;
+	right:0;
+	top:4px;
+	width: 90px;}
+	
+.action-links a,
+.content-plus a,
+.content-plus input{
+	float:right;
+	width:0;
+	height:0;
+	padding:9px 11px;
+	line-height:50px;
+	overflow:hidden;
+	margin-left:8px;
+	background:url('../../Images/MaerskComExt/action-icons.gif') no-repeat;}
+	
+#ctl00_PlaceHolderMain_ctl01_SendToAFriendImageButton{background-position:0 -32px}
+#ctl00_PlaceHolderMain_ctl01_PrintImageButton{background-position:-28px -32px}
+a.addthis_button{background-position:-57px -32px}
+#ctl00_PlaceHolderMain_ctl01_SendToAFriendImageButton:hover{background-position:0 0}
+#ctl00_PlaceHolderMain_ctl01_PrintImageButton:hover{background-position:-28px 0}
+a.addthis_button:hover{background-position:-57px 0}
+.addthis_button img{visibility:hidden}
+
+.featured-image {position:relative; margin-bottom:17px}
+.featured-image img {display:block}
+.image-textarea {
+	position:absolute;
+	left:0;
+	bottom:50px;
+	width:100%;
+	font: normal 17px/18px 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	color:white;
+	background:rgba(0,78,107,0.7);}
+	
+.image-textarea h2,
+.ms-WPBody .image-textarea h2 {
+	float:left;
+	font: normal 40px/1em 'ZettaSerifDemiBold', Georgia, "Times New Roman", Times, serif;
+	letter-spacing:2px;
+	padding:15px 20px;
+    text-shadow: 1px 1px 1px #0D272E;
+}
+	
+.image-textarea div {
+    letter-spacing: 1px;
+    overflow: hidden;
+	padding: 15px 32px 15px 8px;
+    text-shadow: 1px 1px 1px #0D272E;
+}
+	
+.body-image{
+	position:relative;
+	display:block;
+	font:11px Arial, Helvetica, sans-serif;}
+	
+.body-image img{display:block; margin-bottom:5px}
+.body-image:hover .action-btn,
+#fancybox-close .action-btn{display:block}
+.action-btn{
+	display:none;
+	position:absolute;
+	left:-12px;
+	top:-16px;
+	height:16px;
+	padding:8px 4px 12px 11px;
+	font:bold 11px/16px Tahoma, Geneva, sans-serif;
+	color:#005063;
+	background:url('../../Images/MaerskComExt/fancybox/image-action-btn.png') no-repeat;
+	cursor:pointer;}
+	
+.action-btn span{display:block}
+.action-btn .icon{padding-left:25px}
+.action-btn .zoomin{background:url('../../Images/MaerskComExt/fancybox/image-action-zoomin.gif') no-repeat}
+.action-btn .close{background:url('../../Images/MaerskComExt/fancybox/image-action-close.gif') no-repeat}
+.action-btn .end{
+	position:absolute;
+	left:100%;
+	top:8px;
+	width:5px;
+	height:20px;
+	background:url('../../Images/MaerskComExt/fancybox/image-action-btn.png') no-repeat right -8px;}
+	
+.info-block,
+.page-content .image-overlay{margin-right:-2px}
+.info-block{
+	position:relative;
+	min-height:288px;
+	padding:12px;
+	font:11px/16px Verdana, Geneva, sans-serif;
+	color:#e0faff;
+	background:url('../../Images/MaerskComExt/infobox-top.gif');}
+	
+.info-block h2{
+	margin-bottom:10px;
+	font:22px/1em 'ZettaSerifRegular', Georgia, 'Times new roman', serif;
+	color:white;
+	text-shadow:1px 1px #004c5e;}
+
+.info-block p{margin-bottom:2px}
+.page-content .info-block ul,
+.page-content .info-block a{color:#e0faff}
+.page-content .info-block a:hover{text-decoration:underline}
+.page-content .info-block ul li{padding:2px 0 2px 10px; background:url('../../Images/MaerskComExt/dash.gif') no-repeat 0 10px}
+.info-block .bottom {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:230px;
+	height:4px;
+	overflow:hidden;
+	background:url('../../Images/MaerskComExt/infobox-bottom.gif');
+}
+
+.contentzone-top img {width:100%}
+.contentzone-top .ms-listviewtable img,
+.contentzone-top .ms-listviewtable th img,
+.contentzone-top .ms-listviewtable td img {width: auto;}
+
+.contentzone-top nobr img,
+.contentzone-top .ms-WPHeader img{width:auto}
+.contentzone-main{padding-top:10px}
+.contentzone-main #content_sustainability h1 { margin-top: -15px; }
+.contentzone-sideR,
+.areafrontpage2-sideR{overflow:hidden;width:228px}
+.contentzone-sideL,
+.areafrontpage2-sideL{
+	margin-right:10px;
+	overflow:hidden;
+	width:436px;}
+	
+.teaser-dynamic-listview-partcontent{line-height:16px}
+.teaser-news-listpart-title {height: auto !important;}
+
+/*********************************************************************************************** SEARCH */
+
+#SRSB td.ms-sbcell{border:none; padding:0}
+#SRSB select,
+#SRSB input{
+	padding:1px;
+	background:white;
+	border:1px solid #7db5cd;
+	border-right-color:#d6eff8;
+	border-bottom-color:#d6eff8;}
+	
+#SRSB select{margin:0 5px; height:18px}
+:root #SRSB select{margin-top:1px}
+#SRSB input{height:14px; border-right:none;padding-left:3px;padding-right:3px;}
+
+#SRSB td.ms-sbgo{background:none}
+#SRSB td.ms-sbgo a img{display:none}
+#SRSB td.ms-sbgo a{
+	float:left;
+	width:21px;
+	height:18px;
+	background:url('../../Images/MaerskComExt/zoom.gif');}
+	
+.page-content .ms-pagemargin{display:none}
+
+/******************************************************************************************* COMPONENTS */
+
+.vacancy-search,
+.vacancy-search-summary,
+.vacancy-search-listtop,
+.teaser-news-pagelist{font:11px/16px Tahoma,Verdana,Lucida,Helvetica,simsun,sans-serif}
+.vacancy-search-listtitle{width:96px}
+#MaerskComMasterPageBody .ms-listviewtable .ms-vb2{color:#004e6b}
+#MaerskComMasterPageBody .ms-listviewtable .ms-alternating{background:#f8fbfc}
+.teaser-news-pagelist{border-color:#69b8d6; color:#004E6B}
+.vacancy-search-box input{float:left}
+.vacancy-search-box .vacancy-search-input,
+.teaser-news-archive-searchinput,
+.wizard-content-input,
+.wizard-content-textbox,
+.vacancyapply-input2{
+	border-right:none;
+	border-color:#7db5cd;
+	border-bottom-color:#d6eff8;}
+	
+.vacancy-search-box .vacancy-search-submit{
+	width:21px;
+	height:18px;
+	margin:0;
+	padding:0;
+	background:url('../../Images/MaerskComExt/zoom.gif') no-repeat;}
+	
+.teaser-news-archive-searchinput,
+.wizard-content-input,
+.wizard-content-textbox,
+.vacancyapply-input2{border-right:1px solid #d6eff8}
+.teaser-news-archive-searchsubmit{background-image:url('/_layouts/images/MaerskCom/teaser_news_searchbtn.png')}
+
+.customizeselectbox213 div.tag_select,
+.customizeselectbox213 div.tag_select_hover,
+.customizeselectbox213 div.tag_select_open,
+.customizeselectbox213 ul.tag_options,
+.customizeselectbox213 ul.tag_options li,
+.customizeselectbox213 ul.tag_options li.open_hover,
+.customizeselectbox213 ul.tag_options li.open_selected{background-image:url('../../Images/MaerskComExt/selectbg213.gif')}
+
+.customizeselectbox213 ul.tag_options li{padding-left:6px; background:url('../../Images/MaerskComExt/selectbg213.gif') no-repeat -215px 0}
+.customizeselectbox213 ul.tag_options{border-bottom-color:#d6eff8}
+	
+.customizeselectbox200 div.tag_select,
+.customizeselectbox200 div.tag_select_hover,
+.customizeselectbox200 div.tag_select_open,
+.customizeselectbox200 ul.tag_options,
+.customizeselectbox200 ul.tag_options li,
+.customizeselectbox200 ul.tag_options li.open_hover,
+.customizeselectbox200 ul.tag_options li.open_selected{background-image:url('../../Images/MaerskComExt/selectbg200.gif')}
+
+.customizeselectbox200 ul.tag_options li{padding-left:6px; background:url('../../Images/MaerskComExt/selectbg200.gif') no-repeat -202px 0}
+.customizeselectbox200 ul.tag_options{border-bottom-color:#d6eff8}
+	
+.customizeselectbox58 div.tag_select,
+.customizeselectbox5828 div.tag_select,
+.customizeselectbox58 div.tag_select_hover,
+.customizeselectbox5828 div.tag_select_hover,
+.customizeselectbox58 div.tag_select_open,
+.customizeselectbox5828 div.tag_select_open,
+.customizeselectbox58 ul.tag_options,
+.customizeselectbox5828 ul.tag_options,
+.customizeselectbox58 ul.tag_options li,
+.customizeselectbox5828 ul.tag_options li,
+.customizeselectbox58 ul.tag_options li.open_hover,
+.customizeselectbox5828 ul.tag_options li.open_hover,
+.customizeselectbox58 ul.tag_options li.open_selected,
+.customizeselectbox5828 ul.tag_options li.open_selected
+{
+  background-image: url('../../Images/MaerskComExt/selectbg58.gif');
+}
+.customizeselectbox58 ul.tag_options li,
+.customizeselectbox5828 ul.tag_options li,
+.page-content .col-690 .customizeselectbox58 ul.tag_options li,
+.page-content .col-690 .customizeselectbox5828 ul.tag_options li,
+.page-content .sideR .customizeselectbox58 ul.tag_options li,
+.page-content .sideR .customizeselectbox5828 ul.tag_options li {
+  width: 46px;
+  padding: 0 6px;
+  background-position:-60px 0;
+  }
+.customizeselectbox58 ul.tag_options,
+.customizeselectbox5828 ul.tag_options
+{border-bottom-color:#d6eff8}
+	
+.customizeselectbox58 ul.tag_options li.open_hover,
+.customizeselectbox5828 ul.tag_options li.open_hover,
+.page-content .sideR .customizeselectbox58 ul.tag_options li.open_hover,
+.page-content .sideR .customizeselectbox5828 ul.tag_options li.open_hover {
+  background-position: 0 -57px;
+}
+.customizeselectbox58 ul.tag_options li.open_selected,
+.customizeselectbox5828 ul.tag_options li.open_selected,
+.page-content .sideR .customizeselectbox58 ul.tag_options li.open_selected,
+.page-content .sideR .customizeselectbox5828 ul.tag_options li.open_selected {
+  background-position: 0 -37px;
+}
+
+.customizeselectbox160 div.tag_select,
+.customizeselectbox160 div.tag_select_hover,
+.customizeselectbox160 div.tag_select_open,
+.customizeselectbox160 ul.tag_options,
+.customizeselectbox160 ul.tag_options li,
+.customizeselectbox160 ul.tag_options li.open_hover,
+
+.customizeselectbox160 ul.tag_options li.open_selected {background-image:url('/_layouts/images/MaerskCom/selectbg160.gif')}
+
+.customizeselectbox160 ul.tag_options li {background-position: -162px 100%;}
+.customizeselectbox160 ul.tag_options li {
+    background: url("/_layouts/images/MaerskCom/selectbg160.gif") no-repeat scroll -162px 0 transparent;
+    color: #000000;
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    text-decoration: none;
+    width: 148px;
+}
+
+.customizeselectbox160 ul.tag_options {border-bottom-color:#4BBBCF}
+/*.customizeselectbox160 ul.tag_options {
+    background: url("/_layouts/images/MaerskCom/selectbg160.gif") no-repeat scroll left bottom transparent;
+    border-bottom: 1px solid #4BBBCF;
+    list-style: none outside none;
+    margin: 0;
+    max-height: 180px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    width: 160px;
+}*/
+
+.page-content .sideR .wizard-guide li{
+	padding:0;
+	background:none;
+	line-height:16px;}
+	
+.wizard-content-submit-cancel,
+.wizard-content-submit-next,
+.wizard-content-submit-next-disabled,
+.wizard-content-submit-previous,
+.wizard-content-submit-next,
+.wizard-content-submit-finish{background-image:url('../../Images/MaerskComExt/main.png')}
+
+.vacancyapply-unit{overflow:hidden}
+.vacancyapply-unit .titlewidth,
+.vacancyapply-group,
+.vacancyapplydivnofloat,
+.vacancyapply-lsdiv-valid,
+.vacancyapply-unit .valid{font-size:12px}
+.vacancyapply-lsdiv-valid,
+.vacancyapply-unit .valid{line-height:16px}
+.vacancyapply-unit label,
+.vacancyapply-unit2 label{margin:0 10px 0 5px}
+.vacancyapply-unit2 .vacancyapply-unit-div span{font-size:11px}
+.vacancyapply-group select,
+.vacancyapply-unit select,
+.vacancyapply-textbox{
+	background:white;
+	border:1px solid #7db5cd;
+	border-right-color:#d6eff8;
+	border-bottom-color:#d6eff8;}
+	
+.vacancyapply-ls-optionunittxt{margin-top:-2px; padding:0 8px 5px 0}
+
+
+/*********************************************************************************************** FOOTER */
+
+.footer,
+#MaerskComMasterPageBody .footer{
+	position:relative;
+	width:942px;
+	margin:0 -26px;
+	padding:30px 26px 16px;
+	text-transform:uppercase;
+	color:#69b8d6;
+	background:url('../../Images/MaerskComExt/footer.gif') no-repeat bottom;}
+	
+.footer h2{
+	margin-bottom:6px;
+	font:16px/33px 'ZettaSerifRegular', Georgia, 'Times new roman', serif;
+	color:#2f454e;
+	text-transform:uppercase;
+	border-bottom:1px solid #dbf2f6;
+	border-top:1px solid #dbf2f6;}
+	
+.footer ul.alignright{letter-spacing:0}
+.footer ul{padding-bottom:20px;font:13px/22px 'ZettaSerifRegular', Georgia, 'Times new roman', serif;}
+.footer li{list-style:none}
+.footer ul a{color:#69b8d6}
+.footer ul a:hover{color:#004e6b}
+.footer .first{margin-right:15px}
+.footer .bottomline{
+	clear:both;
+	width:100%;
+	overflow:hidden;
+	padding-top:13px;
+	border-top:1px solid #dbf2f6;}
+	
+.footer .bottomline .alignleft{font:14px 'ZettaSansLight', Tahoma, Geneva, sans-serif}
+.footer .bottomline ul{padding:0; font:11px Tahoma, Geneva, sans-serif}
+.footer .bottomline li{float:left; margin-left:26px}
+.footer .bottomline a{color:#69B8D6}
+
+
+/********************************************************************************************** CLASSES */
+
+.left,
+.alignleft,
+.sideL{float:left}
+.right,
+.alignright,
+.sideR{float:right; display: inline;}
+.block{display:block}
+.none{display:none}
+.clear{clear:both}
+
+.left table {
+  width: auto !important;
+}
+.btn{cursor:pointer}
+
+.quote-block{
+	padding-top:12px;
+	font:28px/30px 'ZettaSerifRegular', Tahoma, Geneva, sans-serif;
+	color:#b50030;
+	background:url('../../Images/MaerskComExt/quotes.gif') no-repeat -16px 0;}
+	
+.ms-WPBorder{border:none}
+.margin-top--10{margin-top: -10px}
+.rowpdtop{margin-top:10px}
+.ms-WPBody h2, .ms-TPBody h2 { font-size:40px; font-weight:normal; }
+
+.teaser-text	{	width: 210px; margin-right: 20px;	}
+
+.otherPublications dt {
+	background-color: #0b4d6c;
+	padding: 2px 5px;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'ZettaSerifRegular', Georgia, 'Times new roman';
+}
+
+.otherPublications dd {
+	background-image: url(../../Images/MaerskComExt/dot-lighter.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding: 15px 0 15px 0px;
+	color: #454545;
+	font-family: 'ZettaSerifRegular', Georgia, 'Times new roman';
+}
+
+.otherPublications dd span {
+	float: left;    
+	width: 70px;
+	height: 30px;
+	margin-top: -5px;
+	background-image: url(../../Images/MaerskComExt/icon-pdf.png);
+	background-repeat: no-repeat;
+	background-position: 14px bottom;
+}
+
+.otherPublications dd.type-url span {
+	background-image: url(../../Images/MaerskComExt/icon-link.png);
+}
+
+.otherPublications dd a {
+	color: #81cae7;
+	float: right;
+	width: 105px;
+	background-image: url(../../Images/MaerskComExt/otherPublications-arrow.png);
+	background-repeat: no-repeat;
+	background-position: left 5px;
+	padding-left: 18px;
+}
+.otherPublications dd a:hover {
+	color: #69b8d6;
+}
+
+/*======== iframe styles ========*/
+
+
+
+
+
+/* Graph main blocks */
+#graph{
+  position: relative;
+  width: 690px;
+}
+
+/*  Graph header */
+#graph-header{
+  height: 25px;
+  position: relative;
+}
+  
+  
+  /* Navigation */
+  #graph-nav {
+  	position: absolute;
+  	right: 0;
+  	top: -5px;
+  	}
+    #graph-nav p{
+      color: #9f9f9f;
+      font-size: 10px;
+      float: right;
+      margin: 12px 0 0 0 !important;
+    }
+    #nav{
+      margin: 3px 0 0 0;
+      float: right;
+    }
+    	#nav li {
+    		display: inline;
+    		float: left;
+    		height: 26px;
+    		cursor: pointer;
+      }
+  
+        #group{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif);
+    			width: 67px;
+    		} 
+    		  #group.active, #group:hover{
+    		    background-position: -141px 0 !important;
+    		  }
+    		#sector{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -30px;
+    			width: 66px;
+    		}
+    		  #sector.active, #sector:hover{
+      		  background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -30px;
+    		  }	
+    		#direct-indirect{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -60px;
+    			width: 141px;
+    		}
+    		  #direct-indirect.active, #direct-indirect:hover{
+      		  background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -60px;
+    		  }
+    		#sectors{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -90px;
+    			width: 57px;
+    		}
+    		  #sectors.active, #sectors:hover{
+      		  background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -90px;
+    		  }
+    		#transport{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -120px;
+    			width: 118px;
+    		} 
+    		  #transport.active, #transport:hover{
+    		    background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -120px;
+    		  }
+    		#oil{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -150px;
+    			width: 82px;
+    		} 
+    		  #oil.active, #oil:hover{
+    		    background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -150px;
+    		  }
+    		#industry{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -180px;
+    			width: 96px;
+    		} 
+    		  #industry.active, #industry:hover{
+    		    background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -180px;
+    		  }
+    
+    		#segment{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -210px;
+    			width: 60px;
+    		} 
+    		  #segment.active, #segment:hover{
+    		    background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -210px;
+    		  }
+
+    		#bu{
+      		background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) 0 -240px;
+    			width: 80px;
+    		} 
+    		  #bu.active, #bu:hover{
+    		    background: url(../../Images/MaerskComExt/customcontent/sprite_navigation.gif) -141px -239px;
+    		  }
+
+    
+    		
+  #thick-splitter{
+    background: #004d6c;
+    height: 10px;
+    width: 100%;
+  }
+  
+/* Graph data */
+#graph-data{
+  min-height: 50px;
+  width: 100%;
+}
+#graph-data li{
+  display: none;
+  position: relative;
+}
+#graph-data li.visible-graph{
+  display: block;
+}
+  div.tooltip{
+    background: red;
+    border: 1px solid red;
+    filter: alpha(opacity = 0);
+    opacity: 0.0;
+    position: absolute;
+    z-index: 5;
+	cursor: pointer;
+  }
+    div.tooltip span.value, div.tooltip span.title{
+      display: none;
+	  cursor: pointer;
+    }
+    
+
+/* Graph legend */
+#graph-legend {
+  /* border-top: 1px solid #c0c0c0; */
+}
+#graph-legend li{
+  background: #f3f3f3;
+  height: 0px;
+  overflow: hidden;
+}
+
+/* Graph status */
+#graph-status{
+  background: url('../../Images/MaerskComExt/customcontent/bg_dot.gif') bottom left repeat-x;
+  border-top: 1px solid #c0c0c0;
+  padding: 5px 0;
+}
+  #status{
+  color: #999;
+  float: left;
+  font-size: 18px;
+  margin: 5px 0 0 0;
+  }
+    #status span{
+      color: #4ab130;
+      font-size: 12px;
+  	margin: 0 15px 0 0;
+    }
+  #download{
+    float: right;
+	display: none;
+  }
+    #download p{
+      color: #9f9f9f;
+      font-size: 10px;
+      float: right;
+      margin: 10px 3px 0 0 !important;
+    }
+    #download a{
+      background: url('../../Images/MaerskComExt/customcontent/sprite_download.gif');
+      display: block;
+      float: right;
+      height: 28px;
+      width: 39px;
+    }
+      #download-jpeg{
+        background-position: -39px 0 !important;
+      }
+
+/* Tooltip */
+#tool-tip{
+  background: url('../../Images/MaerskComExt/customcontent/bg_tooltip.png');
+  display: none;
+  height: 138px;
+  position: absolute;
+  width: 207px;
+  z-index: 10;
+}
+  #tooltip-value{
+    font-family: 'ZettaSerifBook', serif;
+    color: #000;
+    font-size: 22px;
+    height: 22px;
+    left: 27px;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    width: 150px;
+  }
+  #tooltip-title{
+    color: #808080;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    left: 27px;
+    overflow: hidden;
+    position: relative;
+    top: 45px;
+    width: 150px;
+  }
+
+
+#graph-sectors, #graph-emission{
+  display: none;
+}
+
+
+#content_sustainability .case{
+	padding: 15px;
+	background: #E7F4F8;
+	font-size: 12px;
+	line-height: 17px;	
+	color: #004D6C;
+	}
+
+	#content_sustainability .case h3{
+		color: #004D6C;
+		margin: 0 0 6px 0;
+		}
+
+	#content_sustainability .case h3 span{
+		font-family: 'ZettaSerifBook' !important;
+		font-weight: normal;
+		}
+
+
+	#content_sustainability .case p{
+		margin: 0;
+		}
+
+
+.spacer {
+	margin: 0 0 30px 0;
+}
+
+#subImg{
+margin-bottom: 30px;
+}
+
+.quote{
+font-family: 'ZettaSansRegular';
+color:#69b8d6;
+font-size: 28px;
+line-height: 32px;
+margin: 0 0 40px 0;
+letter-spacing: -1px;
+}
+
+/* Linkbox */
+
+.linkbox ul,
+.content-txt .linkbox ul,
+#content_sustainability .text .linkbox ul {
+list-style: none;
+padding: 0;
+margin: 0 0 20px 0;
+font-family: 'ZettaSansRegular';
+font-size: 14px;
+line-height: 17px;
+color:#004D6C !important;
+}
+
+.linkbox ul.v1 li{
+list-style: none;
+padding: 5px 10px 5px 10px;
+margin: 0;
+background:url('../../Images/MaerskComExt/customcontent/dl_box_center.gif');
+background-position: center left;
+background-repeat: repeat-y;
+}
+
+.linkbox ul.v1 li.top{
+list-style: none;
+padding: 0;
+margin: 0;
+height: 6px;
+font-size: 0;
+line-height: 0;
+display: block;
+background: url('../../Images/MaerskComExt/customcontent/dl_box_top.gif');
+background-position: top left;
+background-repeat: no-repeat;
+line-height: 3px;
+font-size: 1px;
+}
+
+.linkbox ul.v1 li.bottom{
+list-style: none;
+padding: 0;
+margin: 0;
+font-size: 0;
+line-height: 0;
+height: 6px;
+background:url('../../Images/MaerskComExt/customcontent/dl_box_bottom.gif');
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+.linkbox ul.v2 li{
+list-style: none;
+padding: 0 0 0 10px;
+margin: 0;
+background:url('../../Images/MaerskComExt/customcontent/dl_box_centerv2.gif');
+background-position: center left;
+background-repeat: repeat-y;
+}
+
+.linkbox ul.v2 li.top{
+list-style: none;
+padding: 0;
+margin: 0;
+height: 6px;
+font-size: 0;
+line-height: 0;
+background:url('../../Images/MaerskComExt/customcontent/dl_box_topv2.gif');
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+.linkbox ul.v2 li.bottom{
+list-style: none;
+padding: 0;
+margin: 0;
+height: 6px;
+font-size: 0;
+line-height: 0;
+background:url('../../Images/MaerskComExt/customcontent/dl_box_bottomv2.gif');
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+.linkbox ul li a, .linkbox ul li a:visited{
+background:url('../../Images/MaerskComExt/customcontent/arrow-link.gif');
+background-position: top left;
+background-repeat: no-repeat;
+text-decoration: none;
+color:#69B8D6;
+font-size: 14px;
+line-height: 17px;
+padding: 0 0 0 20px;
+display: block;
+}
+
+.linkbox ul li a:hover, .linkbox ul li a:active{
+color:#004D6C;
+}
+
+    #contentHolder{
+    width:690px;
+    /*background-color: gray;*/
+    }
+    #contentHolder p{
+	  margin: 0 0 18px 0;
+	  }
+    
+    
+
+    #content_sustainability{
+    margin:0;
+    padding: 0;
+    width:690;
+    /*min-height:300px;*/
+    }
+    #content_sustainability .textbox {
+    border-top: 6px solid #004D6C;
+    color:#004D6C;
+   	font-family: Tahoma, Arial, sans-serif;
+	  font-size: 12px;
+	  line-height: 17px;
+	  background: #f3f3f3;
+	  padding: 0 0 10px 0;
+	  margin: 0 0 20px 0;
+  }
+
+
+  #content_sustainability .textbox h1 {
+      padding: 6px 0 6px 8px;
+      margin: 0 0 10px 0;
+      font-family: 'ZettaSerifBook';
+      font-weight: normal;
+      color:#004D6C;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      background: url('../../Images/MaerskComExt/customcontent/dot.gif');
+      background-position: bottom left;
+      background-repeat: repeat-x;
+      }
+
+  #content_sustainability .textbox p {
+      padding: 0px 6px 0 8px;
+	  margin: 0 0 5px 0;
+	  }
+
+  #content_sustainability .textbox ul {
+	  list-style-type: disc;
+	  margin: 0 0 0 25px; 
+	  }
+
+  #content_sustainability .textbox ul li {
+      padding: 6px 6px 6px 8px;
+	  }
+
+
+  #content_sustainability .textbox a {
+      color:#004D6C;
+      text-decoration: none;
+  }
+
+
+
+  #content_sustainability .textboxTarget {
+      border-top: 6px solid #004D6C;
+      color:#fff;
+   	  font-family: Tahoma, Arial, sans-serif;
+	  font-size: 12px;
+	  line-height: 17px;
+	  background: #69b8d6;
+	  padding: 0 0 10px 0;
+	  margin: 0 0 20px 0;
+	  }
+
+
+  #content_sustainability .textboxTarget h1 {
+      padding: 6px 0 6px 8px;
+      margin: 0 0 10px 0;
+      font-family: 'ZettaSerifBook';
+      font-weight: normal;
+      color:#fff;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      background: url('../../Images/MaerskComExt/customcontent/dot.gif');
+      background-position: bottom left;
+      background-repeat: repeat-x;
+      }
+
+  #content_sustainability .textboxTarget p {
+      padding: 0px 6px 0 8px;
+	  margin: 0 0 5px 0;
+	  }
+
+  #content_sustainability .textboxTarget ul {
+	  list-style-type: disc;
+	  margin: 0 0 0 25px; 
+	  }
+
+  #content_sustainability .textboxTarget ul li {
+      padding: 6px 6px 6px 8px;
+	  }
+
+
+  #content_sustainability .textboxTarget a {
+      color:#fff;
+      text-decoration: none;
+  }
+    /*
+    #content_sustainability{
+    margin:0 0 0 24px;
+    padding: 0;
+    width:690;
+    min-height:400px;
+    float:left;
+    }*/
+    
+    #content_left{
+    margin: 0;
+     /*margin:0 0 0 24px;*/
+    padding: 0;
+    width:438px;
+    min-height:400px;
+    float:left;
+    }
+    
+    #content_right{
+    margin:0 0 0 24px;
+    padding: 0;
+    width:228px;
+    min-height:400px;
+    float:left;
+    }
+    
+    .content_right_box h4 a {
+    	color: #fff;
+    	text-decoration: none;
+		line-height: 33px;
+    	}
+    
+    a img {
+		border: 0;
+    }
+         
+    .content_right_box h1{
+    padding: 6px 0 6px 8px;
+    margin: 0 0 10px 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    color:#004D6C;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: url('../../Images/MaerskComExt/customcontent/dot.gif');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    }
+    .content_right_box.defColor h1{
+    color:#000000 !important;
+    padding: 6px 0 !important;
+    }
+    
+    /* h1{
+    padding: 6px 0 6px 0;
+    margin: 0 0 10px 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    color:#000000;
+    font-size: 16px;
+    background: url('../../Images/MaerskComExt/customcontent/dot.gif');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    } */
+    
+    .customContent h1{
+    padding: 15px 0 0 0;
+    margin: 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    color:#004D6C;
+    font-size: 38px;
+    }
+    .customContent h2{
+    padding: 0;
+    margin: 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: bold;
+    color:#004D6C;
+    font-size: 38px;
+    } 
+    
+    .customContent h3{
+    padding: 0 0 0 0;
+    margin: 0;
+    font-family: 'ZettaSerifDemiBold';
+    color:#004D6C;
+    font-size: 38px;
+    }
+    
+    .customContent h4{
+    padding: 0 0 0 8px;
+    margin: 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    color:#ffffff;
+    font-size: 31px;
+    }
+    .customContent h5 {
+    font-family: 'ZettaSerifBook', serif;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    }
+    .flash_elm{
+    padding: 0;
+    margin: 0 0 20px 0;
+    background-color: #E8F4F9;
+    width:228px;
+    height:200px;
+    /*border-top: 1px solid #004D6C;
+    border-bottom: 1px solid #004D6C;*/
+    }
+      /*      
+      .flash_elm{
+      padding: 0 0 0 0;
+      margin: 45px 0 0 0;
+      background-color: #E8F4F9;
+      width:438px;
+      height:287px;
+      border-top: 1px solid #004D6C;
+      border-bottom: 1px solid #004D6C;
+      }      
+      */
+    .flash_elm_small{
+    padding: 0;
+    margin: 0;
+    width:345px;
+    height:267px;
+    float:left;
+    }
+      
+    .flash_elm_small_info{
+    padding: 0;
+    margin: 0;
+    width:345px;
+    height:267px;
+    float:right;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    color:#000000;
+    font-size: 14px;
+    }
+      /*      
+      .flash_elm_small_info{
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      width:345px;
+      height:267px;
+      float:right;
+      font-family: 'ZettaSansRegular';
+	    line-height: 18px;
+      color:#000000;
+      font-size: 14px;
+      }      
+      */
+    .text_elm{
+    padding: 0 ;
+    margin: 30px 0 0 0;
+    background-color: #E8F4F9;
+    width:438px;
+    height:218px;
+    border-top: 6px solid #004D6C;
+    color:#808080;
+    font-family: Tahoma;
+    font-size: 14px;
+    }
+    .text_elm .pointer{
+    float:left;
+    padding:2px 9px 0 0;
+    }
+    .text_elm h5{
+    padding: 0 0 15px 0;
+    margin: 0;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    font-size:20px;
+    color:#004D6C;
+    }
+    .text_elm span{
+    color:#004D6C;
+    }
+    .content_left_box_paragraph div .link, .content_right_text .link{
+    display: block;
+    padding: 5px 0 0 0;
+    }
+    .content_left_box{
+    border-top: 6px solid #004D6C;
+    font-family: Tahoma;
+    font-size: 14px;
+    color:#808080;
+    margin: 0 0 0 0;
+    padding:0 0 30px 0;
+    }
+    .content_left_box_paragraph{
+    width: 218px;
+    float:left;
+    }
+    .content_left_box_paragraph div{
+    width: 198px;
+    color:#004e6b;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    font-size:15px;
+    }
+    .content_left_box_paragraph div p{
+    font-family: 'ZettaSerifDemiBold';
+    font-size:15px;
+    text-transform: uppercase;
+    color:#000;
+    padding:0 0 8px 0;
+    margin:0px;
+    }
+    .content_left_box_paragraph_Result{
+    width:438px;
+    margin:0 0 20px 0;  
+    color:#004e6b;
+    font-size: 15px;
+	  line-height: 20px;
+    font-family: 'ZettaSerifBook';
+    font-weight: normal;
+    }
+      /* 
+      .content_left_box{
+      border-top: 6px solid #004D6C;
+      font-family: Tahoma;
+      font-size: 14px;
+      color:#808080;
+      margin: 0 0 0 0;
+      padding:0 0 30px 0;
+      }
+      .content_left_box_paragraph{
+      width: 218px;
+      float:left;
+      }
+      .content_left_box_paragraph div{
+      width: 198px;
+      color:#004D6C;
+      font-family: 'ZettaSerifBook';
+      font-weight: normal;
+      font-size:19px;
+      }
+      .content_left_box_paragraph div p{
+      font-family: 'ZettaSerifDemiBold';
+      font-weight: normal;
+      font-size:12px;
+      text-transform: uppercase;
+      color:#808080;
+      padding:0 0 8px 0;
+      margin:0px;
+      } */
+    .content_left_box_paragraph_Result .big_number{
+    font-size:180pt;
+    line-height: 180pt;
+    padding: 0;
+    margin: 0;
+    font-family: 'ZettaSerifUltraLight';
+    font-weight: normal;
+    color:#004e6b;
+    }
+    .content_left_box_paragraph_Result div p{
+    font-family: 'ZettaSerifDemiBold';
+    font-weight: normal;
+    font-size:15px;
+    text-transform: uppercase;
+    color:#000;
+    padding:0 0 8px 0;
+    margin:0    
+    }
+    
+    .content_right_box{
+    border-top: 6px solid #004D6C;
+    font-family: ZettaSerifBook;
+    font-size: 15px;
+  	line-height: 20px;
+    color:#004e6b;
+    margin: 0 0 0 0;
+    padding:0 0 0 0;
+    }
+    /*
+    .content_right_box{
+    border-top: 6px solid #004D6C;
+    font-family: Tahoma;
+    font-size: 14px;
+    color:#808080;
+    margin: 0 0 0 0;
+    padding:0 0 0 0;
+    }*/
+    .content_right_box .padding{
+    padding:0 0 20px 0 !important;
+    margin: 0 0 20px 0 !important;
+    }
+    .bgColor{
+    background-color:#69B8D6;
+    margin: 20px 0 0 0;
+    }
+    .content_right_text{
+    padding:0;
+    }
+    /*
+    .content_right_text{
+    padding:0px 0 13px 0;
+    }*/
+    .thinBorder{
+    padding:20px 0 0 0;
+    border-top: 1px solid #004D6C;
+    }
+    
+    /*Content_SustainabilitySTART*/
+    
+    
+    
+ul#master a.headers{
+font-family: 'ZettaSerifBook';
+font-weight: normal;
+color:#000000;
+font-size: 14px;
+text-decoration:none;
+text-transform:uppercase;
+line-height:30px;
+}
+ul#master li a span{
+display:inline;
+float:right;
+width:105px;
+height:30px;
+background: url('../../Images/MaerskComExt/customcontent/expand_section.jpg');
+background-position:left center;
+background-repeat: no-repeat;
+}
+/* 
+ul#master li a span{
+  display:block;
+	float:right;
+	width:75px;
+	height:30px;
+	background: url('../../Images/MaerskComExt/customcontent/arrow_blue.jpg');
+	background-position:left center;
+	background-repeat: no-repeat;
+	padding: 0 0 0 20px;
+	color:#69B8D6;
+	font-size: 12px;
+	margin: 0;
+}
+*/
+
+ul#master a{
+padding:0;
+margin:0;
+outline:none;
+font-family: 'ZettaSerifBook';
+font-weight: normal;
+font-size: 14px;
+color:#808080;
+text-decoration:none;
+line-height:16px;
+}
+ul#master{
+list-style:none;
+padding:0;
+margin:0;
+border-top:6px solid #004D6C;
+border-bottom:6px solid #004D6C;
+}
+ul#master ul{
+display:none;
+padding:3px 0 1px 24px;
+margin:0;
+color:gray;
+background: url('../../Images/MaerskComExt/customcontent/dot.gif');background-position: top left;background-repeat: repeat-x;
+}
+ul#master ul div{
+background-color:#E7F4F8;
+display:block;
+margin-left:-24px;
+padding-left:24px;
+}
+ul#master ul div li.leaf{
+padding:3px 0;
+}
+ul#master li{
+list-style:none;
+padding:0;
+margin:0;
+background: url('../../Images/MaerskComExt/customcontent/dot.gif');background-position: bottom left;background-repeat: repeat-x;
+}
+ul#master ul li{
+list-style:none;
+padding:0;
+margin:0;
+background:none;
+}
+.hide{
+display:none;
+}
+ul#master a{
+padding:0 0 0 24px;
+margin:0;
+outline:none;
+background: url('../../Images/MaerskComExt/customcontent/li_dot.gif');
+background-position: center left;
+background-repeat: no-repeat;
+}
+
+#content_sustainability h1 {
+font-family: 'ZettaSansLight';
+font-weight: normal;
+color:#000000;
+font-size: 50px;
+line-height: 44px;
+padding:0;
+margin:0 0 30px 0;
+background:none;
+text-transform:uppercase;
+position: relative;
+}
+  .h1strong {
+  font-family: 'ZettaSansRegular';
+  font-weight: bold;
+  color: #000;
+  }
+#content_sustainability h2 {
+font-family: 'ZettaSerifBook';
+font-weight: light;
+color:#000000;
+font-size: 50px;
+line-height: 50px;
+padding:0 0 30px 0;
+margin:0;
+background:none;
+text-transform:uppercase;
+}
+#content_sustainability h3 {
+font-family: 'ZettaSerifDemiBold';
+color:#000000;
+font-size: 18px;
+line-height: 21px;
+padding: 0;
+margin: 0;
+background: none;
+}
+#content_sustainability .text{
+font-family: Tahoma;
+font-size: 14px;
+color:#000000;
+line-height:21px;
+padding:0 0 30px 0;
+}
+#content_sustainability .text ul {
+  list-style-type: disc;
+  margin: 0 0 20px 30px;
+}
+.content-txt ul,
+#content_sustainability .text ul {
+    list-style-type: disc;
+    margin: 0 0 20px 30px;
+}
+.contentzone-sideL li,
+#content_sustainability .text ul li {
+  margin: 0 0 10px;
+  padding-left: 8px;
+}
+#content_sustainability .Imgtext{
+font-family: 'ZettaSerifBook';
+color: #004D6C;
+font-size: 28px;
+line-height:34px;
+margin: 30px 0;
+}
+#content_sustainability .Imgtext span {
+  font-family: 'ZettaSerifDemiBold';
+  color:#69b8d6;
+}
+
+.download_pdf_small{
+background: url('../../Images/MaerskComExt/customcontent/dl_pdf_small.gif');
+background-position: center left;
+background-repeat: no-repeat;
+width:228px;
+height:56px;
+float:right;
+display:block;
+clear:both;
+padding:0;
+margin:0 0 20px;
+}
+
+.download_pdf_small div{
+width:165px;
+font-family: 'ZettaSerifBook';
+font-weight: light;
+color:#2f454e;
+font-size: 14px;
+padding:13px 0 0 20px;
+}
+.download_pdf div{
+width:120px;
+font-family: 'ZettaSerifBook';
+font-weight: light;
+color:#2f454e;
+font-size: 14px;
+padding:13px 0 0 20px;
+}
+
+/* 
+
+.download_pdf_small div{
+width:165px;
+font-family: 'ZettaSansRegular';
+color:#1C434D;
+font-size: 13px;
+line-height: 16px;
+padding:13px 0 0 20px;
+}
+.download_pdf div{
+width:120px;
+font-family: 'ZettaSansRegular';
+color:#1C434D;
+font-size: 13px;
+line-height: 16px;
+padding:13px 0 0 20px;
+}
+
+
+*/
+
+.download_pdf div span, .download_pdf_small div span{
+color:#69B8D6;
+}
+
+.download_pdf div a, .download_pdf_small div a{
+color:#69B8D6;
+text-decoration: none;
+}
+
+.download_pdf{
+background: url('../../Images/MaerskComExt/customcontent/dl_pdf.gif');
+background-position: center left;
+background-repeat: no-repeat;
+width:228px;
+height:72px;
+float:right;
+display:block;
+clear:both;
+padding:0 0 0 0;
+margin:20px 0 20px 0;
+}
+
+#subImg{
+margin-bottom: 30px;
+}
+
+.quate{
+font-family: 'ZettaSerifBook';
+font-weight: light;
+color:#69b8d6;
+font-size: 18px;
+}
+
+.quate div{
+}
+
+.quate div span{
+padding:5px 0 0 0;
+display:block;
+font-size: 11px;
+}
+
+.quate div span b{
+display:block;
+}
+
+
+    /*Content_SustainabilityEND*/
+    
+    
+    /*publicationsSTART*/
+    ul#publications, ul#publications ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #004e6b;
+    }
+    ul#publications {
+    margin: 5px 0 0 0;
+	  }
+    ul#publications li a.headers{
+    list-style: none;
+    padding: 0 0 0 5px;
+    margin: 0;
+    background-color:#004e6b;
+    width:685px;
+    display:block;
+    height:20px;
+    line-height: 23px;
+    color:#ffffff;
+    text-decoration: none;
+    font-family: 'ZettaSerifBook';
+	  font-weight: light;
+	  font-size: 14px;
+    }
+    
+    ul#publications ul li a{
+    background: url('../../Images/MaerskComExt/customcontent/report_icon.jpg');
+	  background-position: center left;
+	  background-repeat: no-repeat;
+	  height: 52px;
+	  display: block;
+	  line-height: 50px;
+	  padding: 0 0 0 60px;
+    font-family: 'ZettaSerifBook';
+	  font-weight: light;
+	  color:#000000;
+	  font-size: 14px;
+	  text-decoration: none;
+    }
+    ul#publications ul li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: url('../../Images/MaerskComExt/customcontent/dot.gif');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background-color: none !important;  
+    }
+    
+    ul#publications ul li.lastitem{
+    list-style: none;
+    padding: 0px 0 0px 0;
+    margin: 0;
+    background: none;
+    background-color: none !important;  
+    }
+    
+    ul#publications ul div{
+    padding: 0;
+    margin: 0;
+    }
+    
+    ul#publications a{
+    padding: 0;
+    margin: 0;
+    }
+    
+    ul#publications span.title{
+    float: left;
+	  }
+	  
+    ul#publications span{
+    display:inline;
+	  float:right;
+	  width:75px;
+	  height:50px;
+	  line-height: 53px;
+	  background: url('../../Images/MaerskComExt/customcontent/arrow_blue.jpg');
+	  background-position:left center;
+	  background-repeat: no-repeat;
+	  padding: 0 0 0 20px;
+	  color:#69B8D6;
+	  font-size: 12px;
+    }
+    
+      ul#publications ul li.pub2010-1 a{
+	    background: url('../../Images/MaerskComExt/customcontent/Dataset-2010-thumb.jpg') no-repeat center left;
+	    }
+
+	    ul#publications ul li.pub2010-2 a{
+	    background: url('../../Images/MaerskComExt/customcontent/GRI-2010-thumb.jpg') no-repeat center left;
+	    }
+
+	    ul#publications ul li.pub2009-1 a{
+	    background: url('../../Images/MaerskComExt/customcontent/report_icon.jpg') no-repeat center left;
+	    }
+
+	    ul#publications ul li.pub2008-1 a{
+	    background: url('../../Images/MaerskComExt/customcontent/HSSE_report_2008.jpg') no-repeat center left;
+	    }
+	    ul#publications ul li.pub2008-2 a{
+	    background: url('../../Images/MaerskComExt/customcontent/GHG_emissions.jpg') no-repeat center left;
+	    }
+
+	    ul#publications ul li.pub2007-1 a{
+	    background: url('../../Images/MaerskComExt/customcontent/HSE_report_2007.jpg') no-repeat center left;
+	    }
+	    ul#publications ul li.pub2007-2 a{
+	    background: url('../../Images/MaerskComExt/customcontent/E_report_2007.jpg') no-repeat center left;
+	    }
+    
+    
+    /*publicationsEND*/
+
+
+
+.news {
+	margin: 0;
+	position: relative;
+	}
+
+.newsHeader{
+position:absolute;
+top: 200px;
+left:0px;
+display:block;
+padding:0;
+margin:0;
+background-color: #69b8d6;
+width:438px;
+height:53px;
+z-index: 10;
+}
+
+.newsContent{
+position:relative;
+font-family: 'ZettaSerifBook';
+font-weight: small;
+color:#ffffff;
+font-size: 16px;
+line-height: 19px;
+padding:7px 0 0 5px;
+margin:0;
+}
+
+.newsContent a, .newsContent a:visited{
+color:#ffffff;
+text-decoration: none;
+}
+
+.newsContent img{
+/*position: absolute;
+top:0px;
+right: 0px;*/
+display:none;
+margin: 2px 0 0 10px;
+border: none;
+}
+
+.newsContent a img {
+display:inline;
+}
+
+
+.readmore {
+	text-decoration: none;
+	color:#69B8D6;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+	}
+
+.readmore:hover {
+	color:#004D6C;
+}
+	
+/*============ end iframe styles ============ */
+
+/* social */
+
+.social {
+    float: right;
+    margin: 56px 0 0 10px;
+}
+.social a.facebook, .social a.twitter, .social a.youtube, .social a.linkedin {
+    background: url("../../Images/MaerskComExt/social-icons.gif") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 16px;
+    width: 21px;
+}
+.social a.facebook {
+    background-position: -24px top;
+}
+.social a.twitter {
+    background-position: -48px top;
+}
+.social a.youtube {
+    background-position: -72px top;
+}
+.social a.linkedin {
+    background-position: 0px top;
+}
+.social a span {
+    display: none;
+}
+
+/* end social */
+
+/*-------------------------------------contact us box */
+.contact-us-right {
+	margin-bottom: 20px;
+}
+.contact-us-right h2 {
+	margin-bottom: 18px;
+	font-family: 'ZettaSerifRegular';
+	font-size: 23px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #00506b;
+}
+.contact-us-right img{
+	width: 92px;
+	height: 100px;
+	margin-top: -9px;
+}
+.contact-us-right img.float-r {
+	margin-left: 10px;
+}
+.contact-us-right img.float-l {
+	margin-right: 10px;
+}
+.contact-us-right p {
+	margin: 0;
+	font-family: 'ZettaSansRegular';
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #000;
+}
+.contact-us-right p strong {
+	padding-top: 9px;
+	display: block;
+}
+
+/*------------------------------------- end contact us box */
